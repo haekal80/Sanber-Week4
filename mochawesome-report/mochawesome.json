@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-15T10:41:29.460Z",
+    "end": "2023-10-15T10:41:30.653Z",
+    "duration": 1193,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70d11737-2a16-40ae-ac65-4be5a0b5f25b",
+      "title": "",
+      "fullFile": "D:\\Course\\Sanbercode\\Automation\\Week 4\\KasirAja\\Suites\\Users.js",
+      "file": "\\KasirAja\\Suites\\Users.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+          "title": "CRUD RESTFULL users",
+          "fullFile": "D:\\Course\\Sanbercode\\Automation\\Week 4\\KasirAja\\Suites\\Users.js",
+          "file": "\\KasirAja\\Suites\\Users.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"CRUD RESTFULL users\"",
+              "fullTitle": "CRUD RESTFULL users \"before all\" hook in \"CRUD RESTFULL users\"",
+              "timedOut": false,
+              "duration": 428,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const respLogin = await login()\ntoken = respLogin.body.data.accessToken",
+              "err": {},
+              "uuid": "28431084-9cee-445d-8cf2-47bbadc7beca",
+              "parentUUID": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success create user",
+              "fullTitle": "CRUD RESTFULL users Success create user",
+              "timedOut": false,
+              "duration": 375,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const respCreateUser = await createUser(dataUser, token)\nuserId = await respCreateUser.body.data.userId\nexpect (respCreateUser.status).equal(201)",
+              "err": {},
+              "uuid": "7dc49d20-fa1d-444b-94f7-f3091a305617",
+              "parentUUID": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success get detail user",
+              "fullTitle": "CRUD RESTFULL users Success get detail user",
+              "timedOut": false,
+              "duration": 259,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const respGetDetailUser = await getUserDetail(userId, token)\nexpect (respGetDetailUser.status).equal(200)",
+              "err": {},
+              "uuid": "75f9c866-2303-448a-b88e-684448a355b0",
+              "parentUUID": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success update user",
+              "fullTitle": "CRUD RESTFULL users Success update user",
+              "timedOut": false,
+              "duration": 61,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const respUpdateUser = await updateUser(userId, token)\nexpect (respUpdateUser.status).equal(200)",
+              "err": {},
+              "uuid": "524ddde2-9b37-48eb-a4aa-ecae3d65d891",
+              "parentUUID": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success delete user",
+              "fullTitle": "CRUD RESTFULL users Success delete user",
+              "timedOut": false,
+              "duration": 62,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const respDeleteUser = await deleteUser(userId, token)\nexpect (respDeleteUser.status).equal(200)",
+              "err": {},
+              "uuid": "6d4edb6d-688f-417b-953c-efdd2cee48df",
+              "parentUUID": "28bbc3fe-7989-4a25-bf15-513f5416fd2a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7dc49d20-fa1d-444b-94f7-f3091a305617",
+            "75f9c866-2303-448a-b88e-684448a355b0",
+            "524ddde2-9b37-48eb-a4aa-ecae3d65d891",
+            "6d4edb6d-688f-417b-953c-efdd2cee48df"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 757,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
