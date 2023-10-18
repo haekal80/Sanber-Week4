@@ -9,7 +9,6 @@ describe('CRUD Positive RESTFULL Users',(done)=>{
     before(async() => {
         const respLogin = await login()
         token = respLogin.body.data.accessToken
-        done()
     })
     
     it('Success create user', async () =>{
